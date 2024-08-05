@@ -1,0 +1,113 @@
+/* Remove increment and decrement arrows (spinners) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Container for centering the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Card-like style for the form */
+.place-order-form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Hover effect for the form */
+.place-order-form:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Form title */
+.place-order-form h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.place-order-form label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+.place-order-form input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+/* Input focus effect */
+.place-order-form input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Submit button styling */
+.place-order-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button hover effect */
+.place-order-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .place-order-form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .place-order-form h1 {
+        font-size: 1.2rem;
+    }
+
+    .place-order-form input[type="number"],
+    .place-order-form button {
+        font-size: 0.9rem;
+    }
+}
+
